@@ -1,0 +1,15 @@
+{
+  "name": "acf/hero-block",
+  "title": "Hero Block",
+  "description": "A custom hero block.",
+  "category": "formatting",
+  "icon": "admin-users",
+  "keywords": ["hero", "profile", "card"],
+  "supports": {
+    "align": false
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "template-parts/hero-block/hero-block.php"
+  }
+}

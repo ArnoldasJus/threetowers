@@ -1,0 +1,101 @@
+// // Buttons
+.button_cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  //   background-color: #0073e6;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 1.5;
+  position: relative;
+
+  //   &:hover {
+  //     background-color: #005bb5;
+  //   }
+
+  &::before,
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 27px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &::before {
+    margin-right: 8px;
+    background-image: url("assets/images/arrow-left.svg");
+  }
+
+  &::after {
+    margin-left: 8px;
+    background-image: url("assets/images/arrow-right.svg"); // Replace with your right icon path
+  }
+}
+
+//   // Cards
+//   .card {
+//     border: 1px solid #ddd;
+//     padding: 20px;
+//     border-radius: 5px;
+//     background-color: #fff;
+//     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+//   }
+
+.hero-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+
+  &__profile {
+    text-align: center;
+    margin-bottom: 20px;
+
+    img {
+      border-radius: 50%;
+      max-width: 150px;
+      height: auto;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-top: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #666;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 20px;
+      margin: 10px;
+      max-width: 300px;
+      text-align: center;
+
+      h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 14px;
+        color: #666;
+      }
+    }
+  }
+}
