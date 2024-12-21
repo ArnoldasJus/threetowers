@@ -6,14 +6,14 @@
         while (have_posts()) : the_post();
     ?>
             <h1><?php the_title(); ?></h1>
-            <div class="content__post">
+            <div class="content__page">
                 <?php the_content(); ?>
             </div>
         <?php
         endwhile;
     else :
         ?>
-        <p><?php esc_html_e('Sorry, no posts matched your criteria.', 'threetowers'); ?></p>
+        <p><?php esc_html_e('Sorry, no pages matched your criteria.', 'threetowers'); ?></p>
     <?php
     endif;
     ?>

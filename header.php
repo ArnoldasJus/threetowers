@@ -12,15 +12,17 @@
     <header class="header">
         <div class="header__container">
             <div class="header__logo">
-                <?php
-                if (function_exists('the_custom_logo') && has_custom_logo()) {
-                    the_custom_logo();
-                } else {
-                ?>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="<?php esc_attr_e('Logo', 'threetowers'); ?>">
-                <?php
-                }
-                ?>
+                <a href="<?php echo esc_url(home_url('/')); ?>">
+                    <?php
+                    if (function_exists('the_custom_logo') && has_custom_logo()) {
+                        the_custom_logo();
+                    } else {
+                    ?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="<?php esc_attr_e('Logo', 'threetowers'); ?>">
+                    <?php
+                    }
+                    ?>
+                </a>
             </div>
             <nav class="header__nav">
                 <?php

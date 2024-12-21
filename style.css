@@ -113,7 +113,12 @@ h6 {
 
 .container {
   width: 80%;
-  margin: 0 auto;
+  margin: 50px auto;
+}
+
+.content {
+  width: 80%;
+  margin: 50px auto;
 }
 
 .section {
