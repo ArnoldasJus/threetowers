@@ -14,6 +14,7 @@ if (function_exists('get_field')):
                 <img src="<?php echo esc_url($profile_image['url']); ?>" alt="<?php echo esc_attr($profile_image['alt']); ?>" />
             <?php endif; ?>
             <h2><?php echo esc_html($profile_name); ?></h2>
+            <p>Wallet</p>
             <p><?php echo esc_html($profile_subtitle); ?></p>
             <?php if ($profile_points): ?>
                 <p><?php echo number_format($profile_points, 3, ',', ''); ?></p>

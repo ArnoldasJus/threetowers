@@ -10,6 +10,9 @@ add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 // Theme setup
 function theme_setup()
 {
+    // Add support for post thumbnails
+    add_theme_support('post-thumbnails');
+
     // Add support for custom logo
     add_theme_support('custom-logo', array(
         'height'      => 40,
@@ -82,5 +85,6 @@ function register_acf_blocks()
     register_block_type(__DIR__ . '/template-parts/hero-block');
     register_block_type(__DIR__ . '/template-parts/simple-block');
     register_block_type(__DIR__ . '/template-parts/profile-block');
+    register_block_type(__DIR__ . '/template-parts/three-column-block');
 }
 add_action('init', 'register_acf_blocks');

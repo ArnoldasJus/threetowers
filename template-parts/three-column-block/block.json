@@ -1,0 +1,15 @@
+{
+  "name": "acf/three-column-block",
+  "title": "Three Column Block",
+  "description": "A custom block with a heading, subheading, and 3 cards.",
+  "category": "layout",
+  "icon": "columns",
+  "keywords": ["three", "column", "cards"],
+  "supports": {
+    "align": false
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "template-parts/three-column-block/three-column-block.php"
+  }
+}
