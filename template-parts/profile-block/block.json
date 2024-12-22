@@ -1,15 +1,15 @@
 {
-    "name": "acf/profile-block",
-    "title": "Profile Block",
-    "description": "A custom profile block.",
-    "category": "formatting",
-    "icon": "admin-users",
-    "keywords": ["profile", "user", "card"],
-    "supports": {
-      "align": false
-    },
-    "acf": {
-      "mode": "preview",
-      "renderTemplate": "template-parts/profile-block/profile-block.php"
-    }
+  "name": "acf/profile-block",
+  "title": "Profile Block",
+  "description": "A custom profile block.",
+  "category": "formatting",
+  "icon": "admin-users",
+  "keywords": ["profile", "user", "card"],
+  "supports": {
+    "align": false
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "template-parts/profile-block/profile-block.php"
   }
+}

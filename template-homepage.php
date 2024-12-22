@@ -4,7 +4,8 @@ Template Name: Homepage
 */
 get_header(); ?>
 
-<div class="content content__home">
+<div class="content__homepage">
+    <?php get_sidebar(); ?>
     <div class="main-content">
         <?php
         if (have_posts()) :
@@ -16,7 +17,6 @@ get_header(); ?>
         endif;
         ?>
     </div>
-    <?php get_sidebar(); ?>
 </div>
 
 <?php get_footer(); ?>

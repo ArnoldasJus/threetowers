@@ -6,6 +6,7 @@ if (function_exists('get_field')):
     $profile_image = get_field('profile_image');
     $profile_name = get_field('profile_name');
     $profile_description = get_field('profile_subtitle');
+    $profile_points = get_field('profile_points');
 ?>
     <div class="profile-block">
         <div class="profile-block__profile">
@@ -14,6 +15,9 @@ if (function_exists('get_field')):
             <?php endif; ?>
             <h2><?php echo esc_html($profile_name); ?></h2>
             <p><?php echo esc_html($profile_subtitle); ?></p>
+            <?php if ($profile_points): ?>
+                <p><?php echo number_format($profile_points, 3, ',', ''); ?></p>
+            <?php endif; ?>
         </div>
     </div>
 <?php endif; ?>
