@@ -22,6 +22,17 @@ function theme_setup()
     register_nav_menus(array(
         'primary' => __('Primary Menu', 'threetowers'),
     ));
+
+    // Register default sidebar
+    register_sidebar(array(
+        'name'          => __('Default Sidebar', 'threetowers'),
+        'id'            => 'sidebar-1',
+        'description'   => __('Widgets in this area will be shown in the default sidebar.', 'threetowers'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ));
 }
 add_action('after_setup_theme', 'theme_setup');
 
@@ -70,33 +81,6 @@ function register_acf_blocks()
 {
     register_block_type(__DIR__ . '/template-parts/hero-block');
     register_block_type(__DIR__ . '/template-parts/simple-block');
+    register_block_type(__DIR__ . '/template-parts/profile-block');
 }
 add_action('init', 'register_acf_blocks');
-
-// Debugging information
-add_action('init', function () {
-    if (function_exists('acf_register_block_type')) {
-        error_log('acf_register_block_type function exists.');
-    } else {
-        error_log('acf_register_block_type function does not exist.');
-    }
-
-    if (function_exists('get_field')) {
-        error_log('get_field function exists.');
-    } else {
-        error_log('get_field function does not exist.');
-    }
-});
-
-function tt3child_register_acf_blocks()
-{
-    /**
-     * We register our block's with WordPress's handy
-     * register_block_type();
-     *
-     * @link https://developer.wordpress.org/reference/functions/register_block_type/
-     */
-    register_block_type(__DIR__ . '/blocks/testimonial');
-}
-// Here we call our tt3child_register_acf_block() function on init.
-add_action('init', 'tt3child_register_acf_blocks');
