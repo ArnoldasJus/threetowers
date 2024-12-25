@@ -1,0 +1,15 @@
+{
+  "name": "acf/text-image-block",
+  "title": "Text and Image Block",
+  "description": "A custom block with a heading, subheading, text, and image.",
+  "category": "layout",
+  "icon": "format-image",
+  "keywords": ["text", "image", "block"],
+  "supports": {
+    "align": false
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "template-parts/text-image-block/text-image-block.php"
+  }
+}

@@ -1,15 +1,56 @@
-// Global Styles
 @font-face {
   font-family: "Sora";
-  src: url("../assets/fonts/Sora-Regular.ttf") format("truetype");
-  font-weight: normal;
+  src: url("./assets/fonts/Sora-Thin.ttf") format("truetype");
+  font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Sora";
-  src: url("../assets/fonts/Sora-Bold.ttf") format("truetype");
-  font-weight: bold;
+  src: url("./assets/fonts/Sora-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sora";
+  src: url("./assets/fonts/Sora-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sora";
+  src: url("./assets/fonts/Sora-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sora";
+  src: url("./assets/fonts/Sora-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sora";
+  src: url("./assets/fonts/Sora-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sora";
+  src: url("./assets/fonts/Sora-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sora";
+  src: url("./assets/fonts/Sora-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
   font-style: normal;
 }
 
@@ -31,6 +72,16 @@ h6 {
   margin: 0;
 }
 
+h2 {
+  font-size: 24px;
+  line-height: 28.8px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+p {
+  margin: 0;
+}
 // Utility Classes
 // .u-text-center {
 //   text-align: center;

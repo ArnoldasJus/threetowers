@@ -83,8 +83,8 @@ add_action('customize_register', 'theme_customize_register');
 function register_acf_blocks()
 {
     register_block_type(__DIR__ . '/template-parts/hero-block');
-    register_block_type(__DIR__ . '/template-parts/simple-block');
     register_block_type(__DIR__ . '/template-parts/profile-block');
     register_block_type(__DIR__ . '/template-parts/three-column-block');
+    register_block_type(__DIR__ . '/template-parts/text-image-block');
 }
 add_action('init', 'register_acf_blocks');

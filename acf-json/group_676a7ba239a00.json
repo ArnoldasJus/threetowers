@@ -1,11 +1,31 @@
 {
-    "key": "group_6766c20720928",
-    "title": "Simple Block",
+    "key": "group_676a7ba239a00",
+    "title": "Text and Image Block",
     "fields": [
         {
-            "key": "field_6766c207f6327",
-            "label": "Simple text",
-            "name": "simple_text",
+            "key": "field_676a7ba23d4d7",
+            "label": "Heading",
+            "name": "heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_676a7ba23f05f",
+            "label": "Subheading",
+            "name": "subheading",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -28,7 +48,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/simple-block"
+                "value": "acf\/text-image-block"
             }
         ]
     ],
@@ -41,5 +61,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1734787893
+    "modified": 1735031738
 }

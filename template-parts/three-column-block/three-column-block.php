@@ -1,15 +1,15 @@
 <?php
-// Ensure ACF is active.
 if (function_exists('get_field')):
 
-    // Get ACF fields.
     $heading = get_field('heading');
     $subheading = get_field('subheading');
     $cards = get_field('cards');
 ?>
     <div class="three-column-block">
-        <h2><?php echo esc_html($heading); ?></h2>
-        <h3><?php echo esc_html($subheading); ?></h3>
+        <div class="three-column-block__title">
+            <h2 class="three-column-block__title-heading"><?php echo esc_html($heading); ?></h2>
+            <p class="three-column-block__title-sub"><?php echo esc_html($subheading); ?></p>
+        </div>
         <div class="three-column-block__cards">
             <?php if ($cards): ?>
                 <?php foreach ($cards as $card): ?>

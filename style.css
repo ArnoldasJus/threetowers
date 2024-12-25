@@ -9,14 +9,50 @@ Text Domain: threetowers
 */
 @font-face {
   font-family: "Sora";
-  src: url("../assets/fonts/Sora-Regular.ttf") format("truetype");
-  font-weight: normal;
+  src: url("./assets/fonts/Sora-Thin.ttf") format("truetype");
+  font-weight: 100;
   font-style: normal;
 }
 @font-face {
   font-family: "Sora";
-  src: url("../assets/fonts/Sora-Bold.ttf") format("truetype");
-  font-weight: bold;
+  src: url("./assets/fonts/Sora-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sora";
+  src: url("./assets/fonts/Sora-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sora";
+  src: url("./assets/fonts/Sora-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sora";
+  src: url("./assets/fonts/Sora-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sora";
+  src: url("./assets/fonts/Sora-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sora";
+  src: url("./assets/fonts/Sora-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sora";
+  src: url("./assets/fonts/Sora-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
   font-style: normal;
 }
 body {
@@ -33,6 +69,17 @@ h4,
 h5,
 h6 {
   font-weight: normal;
+  margin: 0;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 28.8px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+p {
   margin: 0;
 }
 
@@ -64,55 +111,118 @@ h6 {
   background-image: url("assets/images/arrow-right.svg");
 }
 
-.hero-block {
+.profile-block {
+  position: relative;
+  display: flex;
+  gap: 34px;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 18px;
+  color: #000000;
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #5edfff 0%, #1d58f5 100%);
+  z-index: 1;
+  box-shadow: 0px 2.77px 3.02px 0px rgba(0, 0, 0, 0.1882352941), 0px 6.65px 7.25px 0px rgba(0, 0, 0, 0.137254902), 0px 12.52px 13.65px 0px rgba(0, 0, 0, 0.1137254902), 0px 22.34px 24.35px 0px rgba(0, 0, 0, 0.0941176471), 0px 41.78px 45.54px 0px rgba(0, 0, 0, 0.0784313725), 0px 100px 109px 0px rgba(0, 0, 0, 0.0549019608);
+}
+.profile-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(180deg, #1d58f5 0%, #65ddfb 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+.profile-block__user {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 12px;
+  line-height: 14.4px;
+  color: #000000;
+  font-weight: 600;
+}
+.profile-block__details {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  background-color: #f9f9f9;
+  gap: 10px;
 }
-.hero-block__profile {
-  text-align: center;
-  margin-bottom: 20px;
+.profile-block__divider {
+  width: 100%;
+  margin: 0;
+  border: none;
+  border-top: 1px solid #000000;
 }
-.hero-block__profile img {
-  border-radius: 50%;
-  max-width: 150px;
-  height: auto;
-}
-.hero-block__profile h2 {
-  font-size: 24px;
-  margin-top: 10px;
-}
-.hero-block__profile p {
-  font-size: 16px;
-  color: #666;
-}
-.hero-block__cards {
+.profile-block__points {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  gap: 9px;
 }
-.hero-block__cards__card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 20px;
-  margin: 10px;
-  max-width: 300px;
-  text-align: center;
+.profile-block__points-label {
+  font-size: 12px;
+  line-height: 14.4px;
+  font-weight: 400;
 }
-.hero-block__cards__card h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
+.profile-block__points-value {
+  font-size: 24px;
+  line-height: 28.8px;
+  font-weight: 800;
 }
-.hero-block__cards__card p {
-  font-size: 14px;
-  color: #666;
+.profile-block__progress {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.profile-block__progress-bar {
+  width: 100%;
+  height: 6px;
+  background-color: #d9d9d9;
+  overflow: hidden;
+  position: relative;
+}
+.profile-block__progress-bar-fill {
+  height: 100%;
+  background-color: #000000;
+  transition: width 0.3s ease;
+}
+.profile-block__progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  line-height: 15.6px;
+  font-weight: 400;
 }
 
 .three-column-block {
-  text-align: center;
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.three-column-block__title {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 10px 0 20px 0;
+  border-bottom: 1px solid #ffffff;
+}
+.three-column-block__title-heading {
+  max-width: 225px;
+}
+.three-column-block__title-sub {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 600;
 }
 .three-column-block__cards {
   display: flex;
@@ -219,6 +329,10 @@ h6 {
 .homepage__content {
   max-width: 966px;
 }
+.homepage__sidebar {
+  flex: 0 0 306px;
+}
+
 .footer {
   background-color: #333;
   color: white;

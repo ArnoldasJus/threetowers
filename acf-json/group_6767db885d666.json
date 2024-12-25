@@ -68,6 +68,26 @@
             "append": ""
         },
         {
+            "key": "field_676ae21d8f655",
+            "label": "Profile subtitle 2",
+            "name": "profile_subtitle_2",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_6767df3628f91",
             "label": "Profile points",
             "name": "profile_points",
@@ -85,6 +105,27 @@
             "min": "",
             "max": "",
             "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_676c648c01ddc",
+            "label": "Profile progress",
+            "name": "profile_progress",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
             "step": "",
             "prepend": "",
             "append": ""
@@ -108,5 +149,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1734868403
+    "modified": 1735163556
 }

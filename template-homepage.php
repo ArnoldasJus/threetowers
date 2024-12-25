@@ -11,7 +11,9 @@ $featured_image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
 
 <div class="homepage" style="background-image: url('<?php echo esc_url($featured_image_url); ?>');">
     <div class="homepage__container">
-        <?php get_sidebar(); ?>
+        <div class="homepage__sidebar">
+            <?php get_sidebar(); ?>
+        </div>
         <div class="homepage__content">
             <?php
             if (have_posts()) :
