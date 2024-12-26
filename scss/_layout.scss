@@ -30,7 +30,7 @@
 
   &__container {
     max-width: 1296px;
-    //width: 1296px;
+    width: 100%;
     padding: 24.5px 0;
     margin: 0 auto;
     display: flex;
@@ -97,6 +97,7 @@
   //height: 100vh;
   background: linear-gradient(180deg, #09103a 0%, #010411 100%);
   overflow: hidden;
+  color: #ffffff;
 
   &::before {
     content: "";

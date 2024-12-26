@@ -26,6 +26,13 @@ if (function_exists('get_field')):
                         <a href="<?php echo esc_url($button['url']); ?>" class="text-image-block__button"><?php echo esc_html($button['title']); ?></a>
                         <p class="text-image-block__text-number"><?php echo esc_html($number); ?></p>
                     </div>
+                    <div class="button__cta">
+                        <a href="<?php echo esc_url($button['url']); ?>" class="button_cta">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-left.svg" alt="Arrow Left" class="button_cta__icon button_cta__icon--left">
+                            <span class="button_cta__text"><?php echo esc_html($button['title']); ?></span>
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="Arrow Right" class="button_cta__icon button_cta__icon--right">
+                        </a>
+                    </div>
                 <?php endif; ?>
             </div>
             <div class="text-image-block__image" style="background-image: url('<?php echo esc_url($image['url']); ?>');">

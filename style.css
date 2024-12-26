@@ -57,7 +57,6 @@ Text Domain: threetowers
 }
 body {
   font-family: "Sora", sans-serif;
-  color: #ffffff;
   margin: 0;
   padding: 0;
 }
@@ -88,7 +87,8 @@ p {
   display: flex;
   justify-content: flex-end;
 }
-.header-cta .button_cta {
+
+.button_cta {
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -98,7 +98,7 @@ p {
   position: relative;
   color: #ffffff;
 }
-.header-cta .button_cta__text {
+.button_cta__text {
   border-width: 1.5px 0px 1.5px 0px;
   border-style: solid;
   border-color: rgba(255, 255, 255, 0.1019607843);
@@ -107,14 +107,21 @@ p {
   justify-content: center;
   align-items: center;
   display: flex;
+  background-color: transparent;
+  transition: background-color 0.3s;
 }
-.header-cta .button_cta__icon {
+.button_cta__icon {
   display: inline-block;
   width: 27px;
   height: 40px;
   background-size: contain;
   background-repeat: no-repeat;
 }
+.button_cta:hover__text {
+  background-color: #ffffff;
+  color: #1d58f5;
+}
+
 .profile-block {
   position: relative;
   display: flex;
@@ -388,6 +395,7 @@ p {
 }
 .header__container {
   max-width: 1296px;
+  width: 100%;
   padding: 24.5px 0;
   margin: 0 auto;
   display: flex;
@@ -431,6 +439,7 @@ p {
   position: relative;
   background: linear-gradient(180deg, #09103a 0%, #010411 100%);
   overflow: hidden;
+  color: #ffffff;
 }
 .homepage::before {
   content: "";
