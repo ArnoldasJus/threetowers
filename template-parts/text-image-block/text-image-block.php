@@ -1,24 +1,34 @@
 <?php
-// Ensure ACF is active.
 if (function_exists('get_field')):
 
-    // Get ACF fields.
     $heading = get_field('heading');
     $subheading = get_field('subheading');
+    $title = get_field('title');
     $text = get_field('text');
+    $number = get_field('number');
     $image = get_field('image');
+    $button = get_field('button');
 ?>
+
     <div class="text-image-block">
-        <h2 class="block-heading"><?php echo esc_html($heading); ?></h2>
-        <h3 class="block-subheading"><?php echo esc_html($subheading); ?></h3>
+        <div class="text-image-block__title">
+            <h2 class="text-image-block__title-heading"><?php echo esc_html($heading); ?></h2>
+            <p class="text-image-block__title-sub"><?php echo esc_html($subheading); ?></p>
+        </div>
         <div class="text-image-block__content">
             <div class="text-image-block__text">
-                <p><?php echo esc_html($text); ?></p>
-            </div>
-            <div class="text-image-block__image">
-                <?php if ($image): ?>
-                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                <div class="text-image-block__text-content">
+                    <h3 class="text-image-block__text-title"><?php echo esc_html($title); ?></h3>
+                    <p class="text-image-block__text-text"><?php echo esc_html($text); ?></p>
+                </div>
+                <?php if ($button): ?>
+                    <div class="button_cta">
+                        <a href="<?php echo esc_url($button['url']); ?>" class="text-image-block__button"><?php echo esc_html($button['title']); ?></a>
+                        <p class="text-image-block__text-number"><?php echo esc_html($number); ?></p>
+                    </div>
                 <?php endif; ?>
+            </div>
+            <div class="text-image-block__image" style="background-image: url('<?php echo esc_url($image['url']); ?>');">
             </div>
         </div>
     </div>

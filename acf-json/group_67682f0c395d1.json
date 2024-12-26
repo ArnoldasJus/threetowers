@@ -59,15 +59,15 @@
             "layout": "table",
             "pagination": 0,
             "min": 0,
-            "max": 0,
+            "max": 3,
             "collapsed": "",
             "button_label": "Add Row",
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_676830eea3075",
-                    "label": "Title",
-                    "name": "title",
+                    "key": "field_676830f8a3076",
+                    "label": "Subtitle",
+                    "name": "subtitle",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -86,9 +86,30 @@
                     "parent_repeater": "field_676830d2a3074"
                 },
                 {
-                    "key": "field_676830f8a3076",
-                    "label": "Subtitle",
-                    "name": "subtitle",
+                    "key": "field_676d1636c2fa1",
+                    "label": "Number",
+                    "name": "number",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_676830d2a3074"
+                },
+                {
+                    "key": "field_676830eea3075",
+                    "label": "Title",
+                    "name": "title",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -148,5 +169,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1735031712
+    "modified": 1735220026
 }

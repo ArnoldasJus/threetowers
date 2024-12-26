@@ -88,6 +88,9 @@
       color: #fff;
       text-decoration: none;
       border-radius: 5px;
+      // border-width: 1.5px 0px 1.5px 0px;
+      // border-style: solid;
+      // border-color: #ffffff1a;
 
       //   &:hover {
       //     background-color: #005bb5;
@@ -97,11 +100,29 @@
 }
 
 .homepage {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  position: relative;
+  //height: 100vh;
+  background: linear-gradient(180deg, #09103a 0%, #010411 100%);
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.2;
+    backdrop-filter: blur(7px);
+    z-index: 1;
+  }
 
   &__container {
+    position: relative;
+    z-index: 2;
     max-width: 1296px;
     width: 100%;
     margin: 0 auto;

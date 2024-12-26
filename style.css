@@ -57,7 +57,7 @@ Text Domain: threetowers
 }
 body {
   font-family: "Sora", sans-serif;
-  color: #333;
+  color: #ffffff;
   margin: 0;
   padding: 0;
 }
@@ -217,7 +217,11 @@ p {
   border-bottom: 1px solid #ffffff;
 }
 .three-column-block__title-heading {
-  max-width: 225px;
+  width: 225px;
+  flex-shrink: 0;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 .three-column-block__title-sub {
   font-size: 12px;
@@ -228,31 +232,149 @@ p {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  flex-wrap: wrap;
 }
 .three-column-block__card {
-  flex: 1 1 calc(33.333% - 20px);
-  background-color: #f5f5f5;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: left;
+  background-color: #10173b;
+  padding: 40px 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1019607843);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  transition: opacity 0.3s;
 }
-.three-column-block__card h4 {
-  margin-top: 0;
+.three-column-block__card:hover {
+  opacity: 0.4;
 }
-.three-column-block__card h5 {
-  margin-top: 10px;
-  color: #666;
+.three-column-block__card--hovered .three-column-block__card-number {
+  background: url("assets/images/material-symbols_check.svg") no-repeat center center;
+  background-size: contain;
+  color: transparent;
 }
-.three-column-block__card p {
-  margin-top: 10px;
-  color: #333;
+.three-column-block__card-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-@media (max-width: 768px) {
-  .three-column-block__card {
-    flex: 1 1 100%;
-  }
+.three-column-block__card-subtitle {
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  background: linear-gradient(180deg, #1d58f5 0%, #65ddfb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #ffffff;
+}
+.three-column-block__card-number {
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  transition: opacity 0.3s;
+}
+.three-column-block__card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.three-column-block__card-title {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 19.2px;
+  font-weight: 800;
+}
+.three-column-block__card-text {
+  font-size: 14px;
+  line-height: 25.2px;
+  font-weight: 400;
+}
+
+.text-image-block {
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.text-image-block__title {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 10px 0 20px 0;
+  border-bottom: 1px solid #ffffff;
+}
+.text-image-block__title-heading {
+  width: 225px;
+  flex-shrink: 0;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.text-image-block__title-sub {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 600;
+}
+.text-image-block__content {
+  background-color: #10173b;
+  border: 1px solid rgba(255, 255, 255, 0.1019607843);
+  border-radius: 18px;
+  display: flex;
+}
+.text-image-block__text {
+  padding: 40px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 99px;
+}
+.text-image-block__text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.text-image-block__text-title {
+  font-size: 34px;
+  line-height: 40.8px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.text-image-block__text-text {
+  font-size: 14px;
+  line-height: 25.2px;
+  font-weight: 400;
+}
+.text-image-block__image {
+  max-width: 480px;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 18px 18px 18px 0;
+}
+.text-image-block__image::before, .text-image-block__image::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+}
+.text-image-block__image::before {
+  top: 0;
+  left: 0;
+  width: 160px;
+  height: 100%;
+  background: #10173b;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+.text-image-block__image::after {
+  bottom: 0;
+  right: 0;
+  width: 80px;
+  height: 50%;
+  background: linear-gradient(180deg, #e0eaf7 0%, #f1f4fe 100%);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  border-radius: 0 0 18px 0;
 }
 
 .header {
@@ -313,11 +435,27 @@ p {
 }
 
 .homepage {
-  background-size: cover;
+  position: relative;
+  background: linear-gradient(180deg, #09103a 0%, #010411 100%);
+  overflow: hidden;
+}
+.homepage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.2;
+  backdrop-filter: blur(7px);
+  z-index: 1;
 }
 .homepage__container {
+  position: relative;
+  z-index: 2;
   max-width: 1296px;
   width: 100%;
   margin: 0 auto;

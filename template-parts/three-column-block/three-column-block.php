@@ -13,10 +13,15 @@ if (function_exists('get_field')):
         <div class="three-column-block__cards">
             <?php if ($cards): ?>
                 <?php foreach ($cards as $card): ?>
-                    <div class="three-column-block__card">
-                        <h4><?php echo esc_html($card['title']); ?></h4>
-                        <h5><?php echo esc_html($card['subtitle']); ?></h5>
-                        <p><?php echo esc_html($card['text']); ?></p>
+                    <div class="three-column-block__card" onmouseover="this.classList.add('three-column-block__card--hovered')" onmouseout="this.classList.remove('three-column-block__card--hovered')">
+                        <div class="three-column-block__card-label">
+                            <p class="three-column-block__card-subtitle"><?php echo esc_html($card['subtitle']); ?></p>
+                            <p class="three-column-block__card-number"><?php echo esc_html($card['number']); ?></p>
+                        </div>
+                        <div class="three-column-block__card-content">
+                            <h3 class="three-column-block__card-title"><?php echo esc_html($card['title']); ?></h3>
+                            <p class="three-column-block__card-text"><?php echo esc_html($card['text']); ?></p>
+                        </div>
                     </div>
                 <?php endforeach; ?>
             <?php endif; ?>

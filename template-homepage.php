@@ -9,7 +9,13 @@ get_header(); ?>
 $featured_image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
 ?>
 
-<div class="homepage" style="background-image: url('<?php echo esc_url($featured_image_url); ?>');">
+<style>
+    .homepage::before {
+        background-image: url('<?php echo esc_url($featured_image_url); ?>');
+    }
+</style>
+
+<div class="homepage">
     <div class="homepage__container">
         <div class="homepage__sidebar">
             <?php get_sidebar(); ?>
