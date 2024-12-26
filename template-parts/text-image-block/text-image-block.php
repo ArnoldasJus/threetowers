@@ -22,10 +22,12 @@ if (function_exists('get_field')):
                     <p class="text-image-block__text-text"><?php echo esc_html($text); ?></p>
                 </div>
                 <?php if ($button): ?>
+                    <?php /*
                     <div class="button_cta">
                         <a href="<?php echo esc_url($button['url']); ?>" class="text-image-block__button"><?php echo esc_html($button['title']); ?></a>
                         <p class="text-image-block__text-number"><?php echo esc_html($number); ?></p>
                     </div>
+                    */ ?>
                     <div class="button__cta">
                         <a href="<?php echo esc_url($button['url']); ?>" class="button_cta">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-left.svg" alt="Arrow Left" class="button_cta__icon button_cta__icon--left">
