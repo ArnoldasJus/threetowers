@@ -1,19 +1,21 @@
 <?php
 
-// Enqueue styles
 function theme_enqueue_styles()
 {
     wp_enqueue_style('theme-style', get_template_directory_uri() . '/style.css');
 }
 add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 
-// Theme setup
+function theme_enqueue_scripts()
+{
+    wp_enqueue_script('mobile-menu', get_template_directory_uri() . '/assets/js/mobile-menu.js', array(), null, true);
+}
+add_action('wp_enqueue_scripts', 'theme_enqueue_scripts');
+
 function theme_setup()
 {
-    // Add support for post thumbnails
     add_theme_support('post-thumbnails');
 
-    // Add support for custom logo
     add_theme_support('custom-logo', array(
         'height'      => 40,
         'width'       => 136,
@@ -21,12 +23,10 @@ function theme_setup()
         'flex-width'  => true,
     ));
 
-    // Register navigation menu
     register_nav_menus(array(
         'primary' => __('Primary Menu', 'threetowers'),
     ));
 
-    // Register default sidebar
     register_sidebar(array(
         'name'          => __('Default Sidebar', 'threetowers'),
         'id'            => 'sidebar-1',
@@ -39,23 +39,19 @@ function theme_setup()
 }
 add_action('after_setup_theme', 'theme_setup');
 
-// Customizer settings
 function theme_customize_register($wp_customize)
 {
-    // Add CTA Section
     $wp_customize->add_section('cta_section', array(
         'title'       => __('Header CTA', 'threetowers'),
         'priority'    => 30,
         'description' => 'Customize the CTA in the header',
     ));
 
-    // Add CTA Text Setting
     $wp_customize->add_setting('cta_text', array(
         'default'   => __('Click Here', 'threetowers'),
         'transport' => 'refresh',
     ));
 
-    // Add CTA Text Control
     $wp_customize->add_control('cta_text_control', array(
         'label'    => __('CTA Text', 'threetowers'),
         'section'  => 'cta_section',
@@ -63,13 +59,11 @@ function theme_customize_register($wp_customize)
         'type'     => 'text',
     ));
 
-    // Add CTA URL Setting
     $wp_customize->add_setting('cta_url', array(
         'default'   => '#',
         'transport' => 'refresh',
     ));
 
-    // Add CTA URL Control
     $wp_customize->add_control('cta_url_control', array(
         'label'    => __('CTA URL', 'threetowers'),
         'section'  => 'cta_section',
@@ -79,7 +73,6 @@ function theme_customize_register($wp_customize)
 }
 add_action('customize_register', 'theme_customize_register');
 
-// Register ACF blocks using block.json
 function register_acf_blocks()
 {
     register_block_type(__DIR__ . '/template-parts/hero-block');

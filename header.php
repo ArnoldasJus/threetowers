@@ -32,13 +32,6 @@
                 ));
                 ?>
             </nav>
-            <?php /*
-            <div class="header__cta">
-                <a href="<?php echo esc_url(get_theme_mod('cta_url', '#')); ?>" class="button_cta">
-                    <?php echo esc_html(get_theme_mod('cta_text', __('Click Here', 'threetowers'))); ?>
-                </a>
-            </div>
-            */ ?>
             <div class="header-cta">
                 <div class="button__cta">
                     <a href="<?php echo esc_url(get_theme_mod('cta_url', '#')); ?>" class="button_cta">
@@ -48,5 +41,18 @@
                     </a>
                 </div>
             </div>
+            <div class="header__mobile-menu-icon" id="mobile-menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
+        <nav class="header__mobile-menu" id="mobile-menu">
+            <?php
+            wp_nav_menu(array(
+                'theme_location' => 'primary',
+                'menu_class'     => 'header__mobile-menu-list',
+            ));
+            ?>
+        </nav>
     </header>

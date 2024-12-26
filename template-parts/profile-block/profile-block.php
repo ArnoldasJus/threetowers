@@ -1,8 +1,6 @@
 <?php
-// Ensure ACF is active.
 if (function_exists('get_field')):
 
-    // Get ACF fields.
     $profile_image = get_field('profile_image');
     $profile_name = get_field('profile_name');
     $profile_subtitle = get_field('profile_subtitle');
