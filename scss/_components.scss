@@ -1,37 +1,76 @@
-.button_cta {
-  display: inline-flex;
-  align-items: center;
-  padding: 10px 20px;
-  //   background-color: #0073e6;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 16px;
-  line-height: 1.5;
-  position: relative;
+// .button_cta {
+//   display: inline-flex;
+//   align-items: center;
+//   //padding: 10px 20px;
+//   //color: #fff;
+//   text-decoration: none;
+//   border-radius: 5px;
+//   font-size: 14px;
+//   line-height: 23.8px;
+//   position: relative;
 
-  //   &:hover {
-  //     background-color: #005bb5;
-  //   }
+//   &::before,
+//   &::after {
+//     content: "";
+//     display: inline-block;
+//     width: 27px;
+//     height: 40px;
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//   }
 
-  &::before,
-  &::after {
-    content: "";
-    display: inline-block;
-    width: 27px;
-    height: 40px;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
+//   &::before {
+//     margin-right: 8px;
+//     background-image: url("assets/images/arrow-left.svg");
+//   }
 
-  &::before {
-    margin-right: 8px;
-    background-image: url("assets/images/arrow-left.svg");
-  }
+//   &::after {
+//     margin-left: 8px;
+//     background-image: url("assets/images/arrow-right.svg");
+//   }
+// }
 
-  &::after {
-    margin-left: 8px;
-    background-image: url("assets/images/arrow-right.svg"); // Replace with your right icon path
+.header-cta {
+  width: 422px;
+  display: flex;
+  justify-content: flex-end;
+
+  .button_cta {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 23.8px;
+    position: relative;
+    color: #ffffff;
+
+    &__text {
+      border-width: 1.5px 0px 1.5px 0px;
+      border-style: solid;
+      border-color: #ffffff1a;
+      width: 162px;
+      height: 40px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+
+    &__icon {
+      display: inline-block;
+      width: 27px;
+      height: 40px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &__icon--left {
+      //margin-right: 8px;
+    }
+
+    &__icon--right {
+      //margin-left: 8px;
+    }
   }
 }
 
@@ -141,12 +180,10 @@
 }
 
 .three-column-block {
-  // text-align: center;
   margin-bottom: 80px;
   display: flex;
   flex-direction: column;
   gap: 40px;
-  //padding: 20px;
 
   &__title {
     display: flex;

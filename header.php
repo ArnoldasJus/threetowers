@@ -32,10 +32,21 @@
                 ));
                 ?>
             </nav>
+            <?php /*
             <div class="header__cta">
                 <a href="<?php echo esc_url(get_theme_mod('cta_url', '#')); ?>" class="button_cta">
                     <?php echo esc_html(get_theme_mod('cta_text', __('Click Here', 'threetowers'))); ?>
                 </a>
+            </div>
+            */ ?>
+            <div class="header-cta">
+                <div class="button__cta">
+                    <a href="<?php echo esc_url(get_theme_mod('cta_url', '#')); ?>" class="button_cta">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-left.svg" alt="Arrow Left" class="button_cta__icon button_cta__icon--left">
+                        <span class="button_cta__text"><?php echo esc_html(get_theme_mod('cta_text', __('Click Here', 'threetowers'))); ?></span>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="Arrow Right" class="button_cta__icon button_cta__icon--right">
+                    </a>
+                </div>
             </div>
         </div>
     </header>

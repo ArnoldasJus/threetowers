@@ -76,27 +76,20 @@
     }
   }
 
-  &__cta {
-    width: 422px;
-    display: flex;
-    justify-content: flex-end;
+  // &__cta {
+  //   width: 422px;
+  //   display: flex;
+  //   justify-content: flex-end;
 
-    a {
-      display: inline-block;
-      //   padding: 10px 20px;
-      //   background-color: #0073e6;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      // border-width: 1.5px 0px 1.5px 0px;
-      // border-style: solid;
-      // border-color: #ffffff1a;
-
-      //   &:hover {
-      //     background-color: #005bb5;
-      //   }
-    }
-  }
+  //   // a {
+  //   //   display: inline-block;
+  //   //   font-weight: 400;
+  //   //   font-size: 14px;
+  //   //   line-height: 23.8px;
+  //   //   text-decoration: none;
+  //   //   border-radius: 5px;
+  //   // }
+  // }
 }
 
 .homepage {
