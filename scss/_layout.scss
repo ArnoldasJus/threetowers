@@ -154,6 +154,11 @@
     display: flex;
     justify-content: space-between;
     gap: 24px;
+
+    @media (max-width: 976px) {
+      flex-direction: column;
+      padding: 20px 0;
+    }
   }
 
   &__content {

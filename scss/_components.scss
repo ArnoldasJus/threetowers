@@ -2,6 +2,10 @@
   width: 422px;
   display: flex;
   justify-content: flex-end;
+
+  @media (max-width: 496px) {
+    display: none;
+  }
 }
 
 .button_cta {
@@ -173,6 +177,10 @@
       white-space: normal;
       word-wrap: break-word;
       overflow-wrap: break-word;
+
+      @media (max-width: 496px) {
+        flex-shrink: 1;
+      }
     }
 
     &-sub {
@@ -186,6 +194,10 @@
     display: flex;
     justify-content: space-between;
     gap: 20px;
+
+    @media (max-width: 640px) {
+      flex-direction: column;
+    }
   }
 
   &__card {
@@ -275,6 +287,10 @@
       white-space: normal;
       word-wrap: break-word;
       overflow-wrap: break-word;
+
+      @media (max-width: 496px) {
+        flex-shrink: 1;
+      }
     }
 
     &-sub {
