@@ -376,6 +376,12 @@ p {
   line-height: 25.2px;
   font-weight: 400;
 }
+@media (max-width: 568px) {
+  .text-image-block__text {
+    text-align: center;
+    align-items: center;
+  }
+}
 .text-image-block__image {
   max-width: 480px;
   width: 100%;
@@ -406,6 +412,11 @@ p {
   background: linear-gradient(180deg, #e0eaf7 0%, #f1f4fe 100%);
   clip-path: polygon(100% 0, 100% 100%, 0 100%);
   border-radius: 0 0 18px 0;
+}
+@media (max-width: 590px) {
+  .text-image-block__image {
+    display: none;
+  }
 }
 
 .header {
