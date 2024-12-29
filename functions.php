@@ -2,13 +2,16 @@
 
 function theme_enqueue_styles()
 {
+    wp_enqueue_style('swiper-css', 'https://unpkg.com/swiper/swiper-bundle.min.css');
     wp_enqueue_style('theme-style', get_template_directory_uri() . '/style.css');
 }
 add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 
 function theme_enqueue_scripts()
 {
+    wp_enqueue_script('swiper-js', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), null, true);
     wp_enqueue_script('mobile-menu', get_template_directory_uri() . '/assets/js/mobile-menu.js', array(), null, true);
+    wp_enqueue_script('cards-block-script', get_template_directory_uri() . '/assets/js/cards-block.js', array('swiper-js'), null, true);
 }
 add_action('wp_enqueue_scripts', 'theme_enqueue_scripts');
 
@@ -75,9 +78,9 @@ add_action('customize_register', 'theme_customize_register');
 
 function register_acf_blocks()
 {
-    register_block_type(__DIR__ . '/template-parts/hero-block');
     register_block_type(__DIR__ . '/template-parts/profile-block');
     register_block_type(__DIR__ . '/template-parts/three-column-block');
     register_block_type(__DIR__ . '/template-parts/text-image-block');
+    register_block_type(__DIR__ . '/template-parts/cards-block');
 }
 add_action('init', 'register_acf_blocks');

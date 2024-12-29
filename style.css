@@ -419,6 +419,142 @@ p {
   }
 }
 
+.cards-block {
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.cards-block .swiper-container {
+  width: 100%;
+  padding: 20px 0;
+}
+.cards-block .swiper-wrapper {
+  display: flex;
+}
+.cards-block .swiper-slide {
+  flex: 0 0 auto;
+  width: 264px;
+  background-color: #10173b;
+  padding: 40px 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1019607843);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: unset;
+  width: 264px !important;
+}
+.cards-block__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 10px 0 20px 0;
+  border-bottom: 1px solid #ffffff;
+}
+.cards-block__title-heading {
+  width: 225px;
+  flex-shrink: 0;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+@media (max-width: 496px) {
+  .cards-block__title-heading {
+    flex-shrink: 1;
+  }
+}
+.cards-block__title-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 13px;
+}
+.cards-block__title-navigation .swiper-button-prev,
+.cards-block__title-navigation .swiper-button-next {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: none;
+  border-radius: 80px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  position: relative;
+  left: 0;
+  margin: 0;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+}
+.cards-block__title-navigation .swiper-button-next:after,
+.cards-block__title-navigation .swiper-button-prev:after {
+  font-size: 9px;
+}
+.cards-block__cards {
+  justify-content: space-between;
+}
+.cards-block__card {
+  background-color: #10173b;
+  padding: 40px 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1019607843);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  transition: opacity 0.3s;
+}
+.cards-block__card:hover {
+  opacity: 0.4;
+}
+.cards-block__card--hovered .cards-block__card-number {
+  background: url("assets/images/material-symbols_check.svg") no-repeat center center;
+  background-size: contain;
+  color: transparent;
+}
+.cards-block__card-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cards-block__card-subtitle {
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  background: linear-gradient(180deg, #1d58f5 0%, #65ddfb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #ffffff;
+}
+.cards-block__card-number {
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  transition: opacity 0.3s;
+}
+.cards-block__card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.cards-block__card-title {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 19.2px;
+  font-weight: 800;
+}
+.cards-block__card-text {
+  font-size: 14px;
+  line-height: 25.2px;
+  font-weight: 400;
+}
+
 .header {
   background: linear-gradient(90.2deg, #010411 0%, #09103a 100%);
   display: flex;

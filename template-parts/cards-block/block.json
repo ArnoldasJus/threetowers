@@ -1,0 +1,15 @@
+{
+  "name": "acf/cards-block",
+  "title": "Cards Block",
+  "description": "A custom block to display slides of cards.",
+  "category": "layout",
+  "icon": "images-alt2",
+  "keywords": ["cards", "carousel", "swiper"],
+  "supports": {
+    "align": false
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "template-parts/cards-block/cards-block.php"
+  }
+}
