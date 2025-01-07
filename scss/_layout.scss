@@ -31,6 +31,16 @@
     justify-content: center;
   }
 
+  &__cta {
+    width: 422px;
+    display: flex;
+    justify-content: flex-end;
+
+    @media (max-width: 496px) {
+      display: none;
+    }
+  }
+
   &__menu {
     list-style: none;
     padding: 0;
